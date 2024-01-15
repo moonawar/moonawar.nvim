@@ -20,5 +20,6 @@ local plugins = {
     },	
    'ThePrimeagen/vim-be-good', 
    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }, 
+   'tpope/vim-fugitive',
 }
 require("lazy").setup(plugins)
