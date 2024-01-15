@@ -21,5 +21,9 @@ local plugins = {
    'ThePrimeagen/vim-be-good', 
    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }, 
    'tpope/vim-fugitive',
+   {
+       'nvim-lualine/lualine.nvim',
+       dependencies = { 'nvim-tree/nvim-web-devicons' }
+   }
 }
 require("lazy").setup(plugins)

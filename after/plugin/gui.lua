@@ -5,3 +5,6 @@ dracula.setup({
 })
 
 vim.cmd.colorscheme('dracula')
+
+-- statusbar
+require("lualine").setup()
