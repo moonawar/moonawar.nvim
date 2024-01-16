@@ -23,5 +23,5 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
 -- Format and selection
-vim.keymap.set("n", "=f", "gg0VG=")
-vim.keymap.set("n", "=a", "gg0VG")
+vim.keymap.set("n", "<C-f>", [[ma | :%s/\s\+$//e<CR>ggVG= | :noh<CR> | `a]], { silent = true })
+vim.keymap.set("n", "<C-a>", "gg0VG")
