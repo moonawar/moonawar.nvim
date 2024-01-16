@@ -5,6 +5,12 @@ vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
 vim.keymap.set("v", "J", ":m \">+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m \"<-2<CR>gv=gv")
 
+-- Centering on immediate movement (credit: Primeagen as usual)
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
 -- Copy-paste with system buffer
 vim.keymap.set("v", "<leader>d", "\"+d")
 vim.keymap.set("v", "<leader>y", "\"+y")
