@@ -18,19 +18,20 @@ local plugins = {
         -- or                              , branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
-   'ThePrimeagen/vim-be-good',
-   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-   'tpope/vim-fugitive',
-   {
-       'nvim-lualine/lualine.nvim',
-       dependencies = { 'nvim-tree/nvim-web-devicons' }
-   },
-   {'williamboman/mason.nvim'},
-   {'williamboman/mason-lspconfig.nvim'},
-   {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-   {'neovim/nvim-lspconfig'},
-   {'hrsh7th/cmp-nvim-lsp'},
-   {'hrsh7th/nvim-cmp'},
-   {'L3MON4D3/LuaSnip'},
+    'ThePrimeagen/vim-be-good',
+    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+    'tpope/vim-fugitive',
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
+    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
+    {'L3MON4D3/LuaSnip'},
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
 }
 require("lazy").setup(plugins)
