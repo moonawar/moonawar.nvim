@@ -32,3 +32,6 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
   }),
 })
+
+-- Mason
+vim.keymap.set("n", "<leader>m", vim.cmd.Mason)
