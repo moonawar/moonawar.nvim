@@ -2,8 +2,8 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
 
 -- Moving selected line vertically
-vim.keymap.set("v", "J", ":m \">+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m \"<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Centering on immediate movement (credit: Primeagen as usual)
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -25,3 +25,12 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 -- Format and selection
 vim.keymap.set("n", "<C-f>", [[ma | :%s/\s\+$//e<CR>ggVG= | :noh<CR> | `a]], { silent = true })
 vim.keymap.set("n", "<C-a>", "gg0VG")
+
+-- Insert mode stuffs
+vim.keymap.set("i", "<C-z>", "<esc>ui")
+
+-- Refresh the sourcing
+vim.keymap.set("n", "<F5>", function ()
+    vim.cmd('source $MYVIMRC')
+    print("Source refreshed")
+end)
