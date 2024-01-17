@@ -5,6 +5,7 @@ vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "D", 'y`>o<Esc>p`[v`]')
+vim.keymap.set("v", "U", 'y`>O<Esc>p`[v`]')
 
 -- Centering on immediate movement (credit: Primeagen as usual)
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
