@@ -4,6 +4,7 @@ vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
 -- Moving selected line vertically
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "D", 'y`>o<Esc>p`[v`]')
 
 -- Centering on immediate movement (credit: Primeagen as usual)
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -25,6 +26,8 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 -- Format and selection
 vim.keymap.set("n", "<C-f>", [[ma | :%s/\s\+$//e<CR>ggVG= | :noh<CR> | `a]], { silent = true })
 vim.keymap.set("n", "<C-a>", "gg0VG")
+vim.keymap.set("v", ">", ">gv")
+vim.keymap.set("v", "<", "<gv")
 
 -- Insert mode stuffs
 vim.keymap.set("i", "<C-z>", "<esc>ui")
