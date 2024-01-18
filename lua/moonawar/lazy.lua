@@ -13,12 +13,9 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     {'Mofiqul/dracula.nvim'},
-    { 'nvim-tree/nvim-web-devicons' },
-    {
-        'nvim-telescope/telescope.nvim', tag = '0.1.5',
-        dependencies = { 'nvim-lua/plenary.nvim' }
-    },
-    {'ThePrimeagen/vim-be-good'},
+    {'nvim-tree/nvim-web-devicons' },
+    {'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = {'nvim-lua/plenary.nvim' }},
+    {'ThePrimeagen/vim-be-good'}, 
     {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     {'tpope/vim-fugitive'},
     {'nvim-lualine/lualine.nvim'},
