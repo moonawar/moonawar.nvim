@@ -12,5 +12,3 @@ function Confirm_git_push()
         print("Push operation canceled.")
     end
 end
-
-vim.keymap.set("n", "<leader>gp", [[:lua Confirm_git_push()<CR>]])

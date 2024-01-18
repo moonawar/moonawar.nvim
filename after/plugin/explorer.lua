@@ -35,7 +35,8 @@ oil.setup({
         ["<C-s>"] = false,
         ["<C-h>"] = false,
         ["<C-t>"] = false,
-        ["<C-p>"] = false,
+        ["<C-p>"] = false,       
+        ["<C-l>"] = false,
     },
     view_options = {
         -- show files and directories that start with "."
