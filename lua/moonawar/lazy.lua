@@ -34,5 +34,7 @@ local plugins = {
     {'L3MON4D3/LuaSnip'},
     {'ThePrimeagen/harpoon'},
     {'akinsho/toggleterm.nvim', version = "*", config = true},
+    {'numToStr/Comment.nvim', lazy = false},
+    'JoosepAlviste/nvim-ts-context-commentstring',
 }
 require("lazy").setup(plugins)
