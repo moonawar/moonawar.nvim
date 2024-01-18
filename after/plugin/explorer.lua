@@ -31,13 +31,16 @@ oil.setup({
         "icon",
     },
     lsp_rename_autosave = false,
+    keymaps = {
+        ["<C-p>"] = false,
+    },
     view_options = {
         -- show files and directories that start with "."
         show_hidden = true,
         -- this function defines what is considered a "hidden" file
         is_hidden_file = function(name, _)
             if vim.startswith(name, "..") then
-                return false 
+                return false
             end
             return vim.startswith(name, ".") or isUnityHidden(name)
         end,
@@ -45,3 +48,4 @@ oil.setup({
 })
 
 vim.keymap.set("n", "<leader>cd",oil.open)
+vim.keymap.set("n", "<leader>cf",oil.open_float)
