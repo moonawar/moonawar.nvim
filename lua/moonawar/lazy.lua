@@ -34,5 +34,6 @@ local plugins = {
     {'numToStr/Comment.nvim', lazy = false},
     {'JoosepAlviste/nvim-ts-context-commentstring'},
     {'stevearc/oil.nvim'},
+    {"kylechui/nvim-surround"}
 }
 require("lazy").setup(plugins)

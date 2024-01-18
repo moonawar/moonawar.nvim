@@ -1,3 +1,4 @@
+-- comments
 require('Comment').setup{
     toggler = {
         ---Line-comment toggle keymap
@@ -13,3 +14,6 @@ require('Comment').setup{
         block = 'gb',
     },
 }
+
+-- surround
+require("nvim-surround").setup()
