@@ -1,17 +1,45 @@
 local oil = require("oil")
 
+local unity_hidden = {
+    '.csproj', '.unityproj', '.sln', '.suo',
+    '.tmp', '.user', '.userprefs', '.pidb',
+    '.booproj', '.svd', '.pdb', '.mdb',
+    '.opendb', '.VC.db', '.meta', '.asset'
+}
+
+function GetExt(filename)
+    return string.match(filename, "%.([^%.]+)$")
+end
+
+local function isUnityHidden(filename)
+    local ext = GetExt(filename)
+
+    if ext == nil then
+        return false
+    end
+
+    ext = '.' .. ext
+    for _, extHidden in ipairs(unity_hidden) do
+        if extHidden == ext then
+            return true
+        end
+    end
+end
+
 oil.setup({
     columns = {
         "icon",
-        "mtime",
     },
     lsp_rename_autosave = false,
     view_options = {
-        -- Show files and directories that start with "."
+        -- show files and directories that start with "."
         show_hidden = true,
-        -- This function defines what is considered a "hidden" file
-        is_hidden_file = function(name, bufnr)
-            return vim.startswith(name, ".")
+        -- this function defines what is considered a "hidden" file
+        is_hidden_file = function(name, _)
+            if vim.startswith(name, "..") then
+                return false 
+            end
+            return vim.startswith(name, ".") or isUnityHidden(name)
         end,
     },
 })
