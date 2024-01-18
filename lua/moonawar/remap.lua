@@ -33,8 +33,6 @@ vim.keymap.set("v", "<", "<gv")
 -- Insert mode stuffs
 vim.keymap.set("i", "<C-z>", "<esc>ui")
 
--- Refresh the sourcing
-vim.keymap.set("n", "<F5>", function ()
-    vim.cmd('source $MYVIMRC')
-    print("Source refreshed")
-end)
+-- Clear selection
+vim.keymap.set("v", ":", "<Esc>:")
+vim.keymap.set("v", "<C-r>", ":s/")
