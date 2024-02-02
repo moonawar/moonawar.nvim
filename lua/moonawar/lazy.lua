@@ -31,8 +31,9 @@ local plugins = {
     {'numToStr/Comment.nvim', lazy = false},
     {'JoosepAlviste/nvim-ts-context-commentstring'},
     {'stevearc/oil.nvim'},
-    {"kylechui/nvim-surround"},
-    {"folke/trouble.nvim"},
-    {'untitled-ai/jupyter_ascending.vim'}
+    {'kylechui/nvim-surround'},
+    {'folke/trouble.nvim'},
+    {'untitled-ai/jupyter_ascending.vim'},
+    {'github/copilot.vim'}
 }
 require("lazy").setup(plugins)
