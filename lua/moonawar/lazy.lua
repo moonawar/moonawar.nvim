@@ -32,6 +32,7 @@ local plugins = {
     {'JoosepAlviste/nvim-ts-context-commentstring'},
     {'stevearc/oil.nvim'},
     {"kylechui/nvim-surround"},
-    {"folke/trouble.nvim"}
+    {"folke/trouble.nvim"},
+    {'untitled-ai/jupyter_ascending.vim'}
 }
 require("lazy").setup(plugins)
