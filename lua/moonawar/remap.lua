@@ -9,6 +9,8 @@ vim.keymap.set("v", "U", 'y`>O<Esc>p`[v`]')
 -- Centering on immediate movement (credit: Primeagen as usual)
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "G", "Gzz")
+vim.keymap.set("n", "gg", "ggzz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
