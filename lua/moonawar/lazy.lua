@@ -36,6 +36,5 @@ local plugins = {
     {'folke/trouble.nvim'},
     {'untitled-ai/jupyter_ascending.vim'},
     {'github/copilot.vim'},
-    {'Civitasv/cmake-tools.nvim'}
 }
 require("lazy").setup(plugins)
