@@ -46,6 +46,7 @@ cmp.setup({
     ['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
 }),
 })
 
@@ -55,3 +56,9 @@ vim.keymap.set("n", "<leader>m", vim.cmd.Mason)
 -- Trouble
 vim.keymap.set("n", "<leader>tt", function() require("trouble").toggle() end)
 vim.keymap.set("n", "<leader>tq", function() require("trouble").toggle("quickfix") end)
+
+-- CMake
+vim.g.cmake_link_compile_commands = 1
+
+vim.keymap.set("n", "<leader>cg", ":CMakeGenerate<CR>")
+vim.keymap.set("n", "<leader>cb", ":CMakeBuild<CR>")
