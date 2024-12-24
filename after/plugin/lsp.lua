@@ -52,7 +52,3 @@ cmp.setup({
 
 -- Mason
 vim.keymap.set("n", "<leader>m", vim.cmd.Mason)
-
--- Trouble
-vim.keymap.set("n", "<leader>tt", function() require("trouble").toggle() end)
-vim.keymap.set("n", "<leader>tq", function() require("trouble").toggle("quickfix") end)
